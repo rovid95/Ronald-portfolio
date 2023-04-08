@@ -7,15 +7,6 @@ My passion for data science is fueled by curiosity and the pursuit of knowledge.
 
 I look forward to connecting with fellow data enthusiasts, collaborators, and potential employers who share my passion for harnessing the power of data to drive innovation and success.
 
-## 📚 Table of Contents
-- [Introduction](#Introduction)
-- [Data Preparation](#Data-Preparation)
-- [EDA](#EDA)
-- [Feature Engineering](#Feature-Engineering)
-- [Model Pipeline](#Model-Pipeline)
-- [Inventory Optimization Strategy](#Inventory-Optimization-Strategy)
-- [Conclusion](#Conclusion)
-
 
 | Project Name | Area | Description |  
 |---|---|---|
