@@ -111,7 +111,7 @@ padding: 20px;
 text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 nav ul {
 flex-direction: column;
 }
