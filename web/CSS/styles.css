@@ -120,3 +120,67 @@ main {
 padding: 10px;
 }
 }
+
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 20px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-weight: bold;
+}
+
+.skill-bar {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.skill-level {
+  height: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+}
+
+/* ... media queries ... */
+
+@media screen and (max-width: 768px) {
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .hero h2 {
+    font-size: 18px;
+  }
+}
+
