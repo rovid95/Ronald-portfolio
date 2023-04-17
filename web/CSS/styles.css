@@ -144,6 +144,8 @@ main {
   flex-grow: 1;
 }
 
+/* ... skill section ... */
+
 .skill {
   margin-bottom: 10px;
 }
@@ -155,9 +157,10 @@ main {
 .skill-bar {
   background-color: #f3f3f3;
   border-radius: 5px;
+  position: relative;
 }
 
-.skill-level {
+.skill-progress {
   height: 20px;
   background-color: #333;
   border-radius: 5px;
@@ -165,6 +168,30 @@ main {
   text-align: right;
   padding-right: 10px;
   line-height: 20px;
+  position: absolute;
+}
+
+/* ... media queries ... */
+
+/* Add the following to the bottom of the styles.css file */
+.skill-progress[data-level="1"] {
+  width: 20%;
+}
+
+.skill-progress[data-level="2"] {
+  width: 40%;
+}
+
+.skill-progress[data-level="3"] {
+  width: 60%;
+}
+
+.skill-progress[data-level="4"] {
+  width: 80%;
+}
+
+.skill-progress[data-level="5"] {
+  width: 100%;
 }
 
 /* ... media queries ... */
