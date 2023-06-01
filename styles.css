@@ -1,0 +1,198 @@
+/* Custom styles for data scientist portfolio website */
+
+/* Header styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+header p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Project styles */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  overflow: hidden;
+  transition: transform .2s ease-in-out;
+}
+.project-card:hover {
+  transform: translateY(-0.5rem);
+}
+.project-card img {
+  height: 24rem;
+  object-fit: cover;
+}
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.project-card p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.project-card a {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6366F1;
+  transition: color .2s ease-in-out;
+}
+.project-card a:hover {
+  color: #4F46E5;
+}
+
+/* About styles */
+.about-list {
+  max-width: 40rem;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6B7280;
+}
+.about-list li {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+.about-list li:before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: #6B7280;
+}
+
+.about-section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+/* Contact styles */
+.contact-form label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #374151;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4B5563;
+  background-color: #F9FAFB;
+  border-color: #E5E7EB;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  transition: border-color .2s ease-in-out;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #6366F1;
+}
+.contact-form textarea {
+  resize: none;
+}
+.contact-form button[type="submit"] {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #6366F1;
+  border-color: #6366F1;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+/* Footer styles */
+footer {
+  background-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+}
+footer span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6B7280;
+}
+footer span span {
+  color: #EF4444;
+}
+
+/* Utility styles */
+.container {
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.text-gray-500 {
+  color: #6B7280;
+}
+.text-red-500 {
+  color: #EF4444;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-normal {
+  font-weight: 400;
+}
+
+/* About me skill bars */
+.skill-bar {
+  background-color: #E2E8F0;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background-color: #4C51BF;
+  height: 100%;
+  width: var(--width);
+  transition: width 1s ease;
+  border-radius: 6px;
+}
+
+.skill-name {
+  display: inline-block;
+  width: 120px;
+}
+/* Adjust these styles as per your preference */

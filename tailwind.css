@@ -1,0 +1,19 @@
+/* Tailwind CSS styles for data scientist portfolio website */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #FFFFFF, #F9FAFB);
+}
+.rounded-xl {
+  border-radius: 1rem;
+}
+.shadow-xl {
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
