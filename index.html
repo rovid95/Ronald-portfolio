@@ -3,74 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="web/css/styles.css">
-  <title>Data Scientist Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <title>Ronald's  Portfolio</title>
+  <style>
+    /* Custom styles */
+    /* ... */
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: #0a7aca;
+    }
+    .wrapper{
+      width: 40%;
+      min-width: 570px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 50%;
+    }
+    .container{
+      width: 100%;
+      padding: 30px 30px 50px;
+      background-color: white;
+      border: 2px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+    } 
+    .container *{
+      font-family: "Poppins",sans-serif;
+      color: black;
+      font-weight: 500;
+    }
+    h2{
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+      text-align: center;
+      font-size: 33px;
+      font-weight: bold;
+    }
+    .skills:not(:last-child){
+      margin-bottom: 30px;
+    }
+    .details{
+      width: 100%;
+      display: flex;  
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .bar{
+      position: relative;
+
+      border: 2px solid #0d96e0;
+
+      border-radius: 20px;
+
+    }
+    .bar div{
+      position: relative;
+      width: 0;
+      height: 9px;
+      border-radius: 10px;
+      background-color: #0d96e0;
+    
+
+    }
+    #html-bar{
+      animation: html-fill 2s forwards;
+    }
+    @keyframes html-fill{
+      100%{
+          width: 90%;
+      }
+    }
+    #css-bar{
+      animation: css-fill 2s forwards;
+    }
+    @keyframes css-fill{
+      100%{
+          width: 75%;
+      }
+    }
+    #tableau-bar{
+      animation: tableau-fill 2s forwards;
+    }
+    @keyframes tableau-fill{
+      100%{
+          width: 70%;
+      }
+    }
+    #js-bar{
+      animation: js-fill 2s forwards;
+    }
+    @keyframes js-fill {
+      100%{
+          width: 72%;
+      }
+    }
+    #jQuery-bar{
+      animation: jQuery-fill 2s forwards;
+    }
+    @keyframes jQuery-fill{
+      100%{
+          width: 58%;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <a href="#" class="flex-shrink-0 flex items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+            <span class="ml-2 font-semibold text-xl text-gray-800">Ronald's Portfolio</span>
+          </a>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+          <a href="#Projects" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+          <a href="#About Me" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+          <a href="#Contact" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <main>
-    <section id="about">
-      <<div class="hero">
-        <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
-        <h1>Your Name</h1>
-        <h2>Data Scientist</h2>
-        <p>Hello! I'm a data scientist with experience in machine learning, statistical analysis, and data visualization. I love solving complex problems and turning data into actionable insights.</p>
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold leading-tight text-gray-900">Hello, I'm a Data Scientist</h1>
+        <p class="mt-1 max-w-2xl text-xl text-gray-500">With 2 years of experience in Machine Learning Modeling</p>
       </div>
-    </section>
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <article>
-          <img src="project1-thumbnail.jpg" alt="Project 1 thumbnail">
-          <h3>Project 1</h3>
-          <p>Description of project 1...</p>
-          <a href="project1-link.html">Learn more</a>
-        </article>
-        <article>
-          <img src="project2-thumbnail.jpg" alt="Project 2 thumbnail">
-          <h3>Project 2</h3>
-          <p>Description of project 2...</p>
-          <a href="project2-link.html">Learn more</a>
-        </article>
-      </div>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skill">
-        <p>Python</p>
-        <div class="skill-bar">
-          <div class="skill-progress" data-level="5"></div>
-        </div>
-        <p>R</p>
-        <div class="skill-bar">
-          <div class="skill-progress" data-level="3"></div>
-        </div>
-        <p>SQL</p>
-        <div class="skill-bar">
-          <div class="skill-progress" data-level="5"></div>
-        </div>
-      </div>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>Phone: (123) 456-7890</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername">https://www.linkedin.com/in/yourusername</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername">https://github.com/yourusername</a></p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2023 Your Name. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    </header>
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <div class="px-4 py-6 sm:px-0">
+        <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Projects">Projects</h2>
+        <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0">
+              <a href="Customer Segmentation and Churn Prediction.html" target="_blank"></a><img class="h-48 w-full object-cover" src="./img/radiobase.jpg" alt="Project 1" ></a>
+            </div>
+            <div class="flex-1 p-4">
+              <h3 class="font-semibold text-gray-900">Churn Prediction for a Telecom Company</h3>
+              <p class="max-w-xs text-gray-500">Objective: To develop a machine learning model to predict customer churn for a telecom company, enabling the company to take proactive actions to retain customers at risk of churn.</p>
+              <div class="mt-4">
+              <a href="Customer Segmentation and Churn Prediction.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
+              </div>
+              </div>
+              </div>
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+              <img class="h-48 w-full object-cover" src="./img/sentiment.jpg" alt="Project 2">
+              </div>
+              <div class="flex-1 p-4">
+              <h3 class="font-semibold text-gray-900">Sentiment Analysis and Product Recommendation</h3>
+              <p class="max-w-xs text-gray-500">Objective: The goal is to develop a model that can analyze customer feedback from various channels and categorize it into positive, negative, or neutral sentiment. This sentiment analysis is then used to enhance a product recommendation engine that suggests relevant products to customers based on their sentiment, purchase history, and browsing behavior.</p>
+              <div class="mt-4">
+              <a href="Sentiment Analysis and Product Recommendation.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
+              </div>
+              </div>
+              </div>
+              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+              <img class="h-48 w-full object-cover" src="./img/sales.jpg" alt="Sales forecasting and inventory management">
+              </div>
+              <div class="flex-1 p-4">
+              <h3 class="font-semibold text-gray-900">Sales forecasting and inventory management</h3>
+              <p class="max-w-xs text-gray-500">This project demonstrates the effective application of machine learning techniques and Python to forecast sales and optimize inventory management in a retail context. By combining accurate sales forecasts with efficient inventory management strategies, businesses can achieve improved customer satisfaction and reduced operational costs.</p>
+              <div class="mt-4">
+              <a href="Sales Forecasting and Inventory Optimization.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              <!-- About me section -->
+              <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div class="px-4 py-6 sm:px-0">
+                  <h2 class="text-2xl font-bold leading-tight text-gray-900" id="About Me">About Me</h2>
+                  <div class="container" style="display: flex;
+                  
+                  justify-content: center;
+                  align-items: center;
+                  height: 100%;
+                  width: 100%;
+                  margin: 0;">
+                    <p class="max-w-xl mt-6 text-gray-500" >
+                      My work covers a wide array of data science techniques and methodologies, including data preprocessing, exploratory data analysis, feature engineering, predictive modeling, and evaluation of machine learning models. I have also incorporated cutting-edge techniques like deep learning and natural language processing to deliver state-of-the-art solutions.
+                    <br>
+                    <br>
+                      My passion for data science is fueled by curiosity and the pursuit of knowledge. I constantly strive to enhance my skills by staying up-to-date with the latest research, tools, and trends in the field. This dedication is reflected in the projects within this repository, which showcase my ability to adapt, innovate, and deliver value using data-driven approaches.</p>
+                  </div>
+                  
+                    <br>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900" id="About Me">Skills</h3>
+                    <div class="mt-6">
+                        <div class="shape-1"></div>
+                        <div class="shape-2"></div>
+                        <div class="container">
+                            <div class="skills">
+                                <div class="details">
+                                    <span>Machine Learning Modeling</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="bar">
+                                    <div id="html-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <div class="details">
+                                    <span>Python</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="bar">
+                                    <div id="css-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                              <div class="details">
+                                  <span>Tableau</span>
+                                  <span>70%</span>
+                              </div>
+                              <div class="bar">
+                                  <div id="tableau-bar"></div>
+                              </div>
+                          </div>
+                            <div class="skills">
+                                <div class="details">
+                                    <span>SQL</span>
+                                    <span>72%</span>
+                                </div>
+                                <div class="bar">
+                                    <div id="js-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <div class="details">
+                                    <span>R</span>
+                                    <span>68%</span>
+                                </div>
+                                <div class="bar">
+                                    <div id="jQuery-bar"></div>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+              </div>
+              
+          <!-- Contact section -->
+          <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="px-4 py-6 sm:px-0">
+              <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Contact">Contact</h1>
+              <div class="w-full mb-4">
+                <div class="h-1 mx-auto bg-gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+              </div>
+              <div class="flex justify-center mt-8">
+                <a href="https://www.linkedin.com/in/ronald-sol%C3%B3rzano-7b0494115/" target="_blank" rel="noopener noreferrer" class="mx-4">
+                  <img src="./img/linkedin.png" alt="LinkedIn" class="w-12 h-12">
+                </a>
+                <a href="https://github.com/rovid95/Ronald-portfolio" target="_blank" rel="noopener noreferrer" class="mx-4">
+                  <img src="./img/github.png" alt="GitHub" class="w-12 h-12">
+                </a>
+                <a href="mailto:ronald_dsn95@hotmail.com" class="mx-4">
+                  <img src="./img/outlook.png" alt="Email" class="w-12 h-12">
+            </div>
+          </div>
+        </main>
+        <footer class="bg-white shadow">
+          <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between">
+              <div class="text-gray-500">
+                <span>&copy; 2022 Ronald Solórzano</span>
+              </div>  
+              <div class="text-gray-500">
+                <span>Made with <span class="text-red-500">&hearts;</span> by Ronald Solórzano</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="main.js"></script>
+      </body>
+      </html>
