@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Tailwind CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-  <!--<link rel="stylesheet" href="styles.css">-->
-  <title>Ronald's  Portfolio</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <title>Ronald's  Portfolio</title>
+    <style>
     /* Custom styles */
     /* ... */
     *{
@@ -34,7 +34,7 @@
       border-radius: 10px;
       box-shadow: 0 20px 30px rgba(0,0,0,0.2);
       backdrop-filter: blur(10px);
-    } 
+    }
     .container *{
       font-family: "Poppins",sans-serif;
       color: black;
@@ -52,14 +52,14 @@
     }
     .details{
       width: 100%;
-      display: flex;  
+      display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
     }
     .bar{
       position: relative;
 
-      border: 2px solid #0d96e0;
+      border: 2px solid #6699CC;
 
       border-radius: 20px;
 
@@ -69,8 +69,8 @@
       width: 0;
       height: 9px;
       border-radius: 10px;
-      background-color: #0d96e0;
-    
+      background-color: #6699CC;
+
 
     }
     #html-bar{
@@ -113,184 +113,298 @@
           width: 58%;
       }
     }
+    /* Media query for mobile */
+    @media (max-width: 640px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        transition: all 0.3s ease;
+      }
+      .nav-links.open {
+        display: block;
+      }
+    }
+
+     /* Sticky navigation */
+    .sticky-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    /* Adjust padding to avoid content overlapping */
+    .content {
+      padding-top: 100px; /* Adjust height based on the navigation bar height */
+    }
+
+    /* Sticky class for navigation */
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      animation: slideDown 0.3s ease;
+    }
+
+    /* Animation for sticky navigation */
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-100">
-  <nav class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex">
-          <a href="#" class="flex-shrink-0 flex items-center">
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-            <span class="ml-2 font-semibold text-xl text-gray-800">Ronald's Portfolio</span>
-          </a>
-        </div>
-        <div class="flex items-center">
-          <a href="#" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-          <a href="#Projects" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-          <a href="#About Me" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">About Me</a>
-          <a href="#Contact" class="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <header class="bg-white shadow">
-      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold leading-tight text-gray-900">Hello, I'm a Data Scientist</h1>
-        <p class="mt-1 max-w-2xl text-xl text-gray-500">With 2 years of experience in Machine Learning Modeling</p>
-      </div>
-    </header>
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <div class="px-4 py-6 sm:px-0">
-        <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Projects">Projects</h2>
-        <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <a href="Customer Segmentation and Churn Prediction.html" target="_blank"></a><img class="h-48 w-full object-cover" src="./img/radiobase.jpg" alt="Project 1" ></a>
+
+  <header class="bg-white shadow">
+    <nav class="bg-white shadow sticky-nav h-26">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="flex items-center">
+              <img class="h-28 w-auto" src="./img/logo.jpg" alt="Workflow">
+            </a>
+          </div>
+  
+          <!-- Navigation links -->
+          <div class="flex items-center">
+            <div class="flex items-center hidden sm:block">
+              <a href="#" class="text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium h-12">Home</a>
+              <a href="#Projects" class="text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">Projects</a>
+              <a href="#About Me" class="text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">About Me</a>
+              <!--<a href="#Contact" class="text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">Contact</a>-->
             </div>
-            <div class="flex-1 p-4">
-              <h3 class="font-semibold text-gray-900">Churn Prediction for a Telecom Company</h3>
-              <p class="max-w-xs text-gray-500">Objective: To develop a machine learning model to predict customer churn for a telecom company, enabling the company to take proactive actions to retain customers at risk of churn.</p>
-              <div class="mt-4">
-              <a href="Customer Segmentation and Churn Prediction.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
-              </div>
-              </div>
-              </div>
-              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="flex-shrink-0">
-              <img class="h-48 w-full object-cover" src="./img/sentiment.jpg" alt="Project 2">
-              </div>
-              <div class="flex-1 p-4">
-              <h3 class="font-semibold text-gray-900">Sentiment Analysis and Product Recommendation</h3>
-              <p class="max-w-xs text-gray-500">Objective: The goal is to develop a model that can analyze customer feedback from various channels and categorize it into positive, negative, or neutral sentiment. This sentiment analysis is then used to enhance a product recommendation engine that suggests relevant products to customers based on their sentiment, purchase history, and browsing behavior.</p>
-              <div class="mt-4">
-              <a href="Sentiment Analysis and Product Recommendation.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
-              </div>
-              </div>
-              </div>
-              <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="flex-shrink-0">
-              <img class="h-48 w-full object-cover" src="./img/sales.jpg" alt="Sales forecasting and inventory management">
-              </div>
-              <div class="flex-1 p-4">
-              <h3 class="font-semibold text-gray-900">Sales forecasting and inventory management</h3>
-              <p class="max-w-xs text-gray-500">This project demonstrates the effective application of machine learning techniques and Python to forecast sales and optimize inventory management in a retail context. By combining accurate sales forecasts with efficient inventory management strategies, businesses can achieve improved customer satisfaction and reduced operational costs.</p>
-              <div class="mt-4">
-              <a href="Sales Forecasting and Inventory Optimization.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
-              </div>
-              </div>
-              </div>
-              </div>
-              </div>
-              </div>
-              <!-- About me section -->
-              <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-                <div class="px-4 py-6 sm:px-0">
-                  <h2 class="text-2xl font-bold leading-tight text-gray-900" id="About Me">About Me</h2>
-                  <div class="container" style="display: flex;
-                  
-                  justify-content: center;
-                  align-items: center;
-                  height: 100%;
-                  width: 100%;
-                  margin: 0;">
-                    <p class="max-w-xl mt-6 text-gray-500" >
-                      My work covers a wide array of data science techniques and methodologies, including data preprocessing, exploratory data analysis, feature engineering, predictive modeling, and evaluation of machine learning models. I have also incorporated cutting-edge techniques like deep learning and natural language processing to deliver state-of-the-art solutions.
-                    <br>
-                    <br>
-                      My passion for data science is fueled by curiosity and the pursuit of knowledge. I constantly strive to enhance my skills by staying up-to-date with the latest research, tools, and trends in the field. This dedication is reflected in the projects within this repository, which showcase my ability to adapt, innovate, and deliver value using data-driven approaches.</p>
-                  </div>
-                  
-                    <br>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900" id="About Me">Skills</h3>
-                    <div class="mt-6">
-                        <div class="shape-1"></div>
-                        <div class="shape-2"></div>
-                        <div class="container">
-                            <div class="skills">
-                                <div class="details">
-                                    <span>Machine Learning Modeling</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="bar">
-                                    <div id="html-bar"></div>
-                                </div>
+  
+            <!-- Hamburger icon -->
+            <div class="flex items-center sm:hidden">
+              <button type="button" class="nav-toggle text-gray-600 hover:text-black-1200 focus:outline-none">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Contact section -->
+          <div class="flex items-center">
+            <div class="flex -right mt-8">
+              <a href="https://www.linkedin.com/in/ronald-sol%C3%B3rzano-7b0494115/" target="_blank" rel="noopener noreferrer" class="mx-4">
+                <img src="./img/linkedin.png" alt="LinkedIn" class="w-12 h-12">
+              </a>
+              <a href="https://github.com/rovid95/Ronald-portfolio" target="_blank" rel="noopener noreferrer" class="mx-4">
+                <img src="./img/github.png" alt="GitHub" class="w-12 h-12">
+              </a>
+              <a href="mailto:ronald_dsn95@hotmail.com" class="mx-4">
+                <img src="./img/outlook.png" alt="Email" class="w-12 h-12">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile-friendly navigation menu -->
+      <div class="nav-links hidden sm:hidden">
+        <a href="#" class="block text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">Home</a>
+        <a href="#Projects" class="block text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">Projects</a>
+        <a href="#About Me" class="block text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">About Me</a>
+        <!--<a href="#Contact" class="block text-gray-600 hover:text-black px-3 py-2 rounded-md text-lg font-medium">Contact</a>-->
+      </div>
+    </nav>
+  </header>   
+  
+
+<!-- JavaScript code for responsive behavior -->
+<script>
+          // Toggle navigation menu on click
+          document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+            });
+
+          // Close navigation menu when clicking outside of it
+          document.addEventListener('click', function(event) {
+              const navLinks = document.querySelector('.nav-links');
+              const navToggle = document.querySelector('.nav-toggle');
+
+              if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+                navLinks.classList.remove('open');
+              }
+            });
+
+          // Add/remove sticky class on scroll
+        window.addEventListener('scroll', function() {
+          const navigation = document.querySelector('.sticky-nav');
+          const scrollPosition = window.scrollY;
+
+          if (scrollPosition > 0) {
+            navigation.classList.add('sticky');
+          } else {
+            navigation.classList.remove('sticky');
+          }
+        });
+        </script>
+
+<!-- JavaScript code for responsive behavior -->
+<!-- Your page content -->
+<div class="content">
+    <!-- Your page content goes here -->
+    <main>
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+
+            <!-- Welcome title -->
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-0 lg:px-8 flex flex-col justify-center items-center"  id="Title">
+                <h1 class="text-3xl font-bold leading-tight text-black"> Ronald Solórzano </h1>
+                <p class="mt-1 max-w-2xl text-xl text-black justify-center items-center">Hello! It's great to have you here. These are my personal projects.</p>
+                
+            </div>
+            
+            
+            <div class="px-4 py-6 sm:px-0">
+                <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Projects">Projects</h2>
+                <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex-shrink-0">
+                            <img class="h-48 w-full object-cover" src="./img/radiobase.jpg" alt="Project 1" >
+                        </div>
+                        <div class="flex-1 p-4">
+                            <h3 class="font-semibold text-gray-900">Churn Prediction for a Telecom Company</h3>
+                            <p class="max-w-xs text-gray-500">The objective is to develop a machine learning model to predict customer churn for a telecom company, enabling the company to take proactive actions to retain customers at risk of churn.</p>
+                            <div class="mt-4">
+                                <a href="Customer Segmentation and Churn Prediction.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
                             </div>
-                            <div class="skills">
-                                <div class="details">
-                                    <span>Python</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="bar">
-                                    <div id="css-bar"></div>
-                                </div>
-                            </div>
-                            <div class="skills">
-                              <div class="details">
-                                  <span>Tableau</span>
-                                  <span>70%</span>
-                              </div>
-                              <div class="bar">
-                                  <div id="tableau-bar"></div>
-                              </div>
-                          </div>
-                            <div class="skills">
-                                <div class="details">
-                                    <span>SQL</span>
-                                    <span>72%</span>
-                                </div>
-                                <div class="bar">
-                                    <div id="js-bar"></div>
-                                </div>
-                            </div>
-                            <div class="skills">
-                                <div class="details">
-                                    <span>R</span>
-                                    <span>68%</span>
-                                </div>
-                                <div class="bar">
-                                    <div id="jQuery-bar"></div>
-                                </div>
-                            
                         </div>
                     </div>
-
+                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex-shrink-0">
+                            <img class="h-48 w-full object-cover" src="./img/sentiment.jpg" alt="Project 2">
+                        </div>
+                        <div class="flex-1 p-4">
+                            <h3 class="font-semibold text-gray-900">Sentiment Analysis and Product Recommendation</h3>
+                            <p class="max-w-xs text-gray-500">The goal is to develop a model that can analyze customer feedback from various channels and categorize it into positive, negative, or neutral sentiment.It is then used to enhance a product recommendation engine that suggests relevant products to customers.</p>
+                            <div class="mt-4">
+                                <a href="Sentiment Analysis and Product Recommendation.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex-shrink-0">
+                            <img class="h-48 w-full object-cover" src="./img/sales.jpg" alt="Sales forecasting and inventory management">
+                        </div>
+                        <div class="flex-1 p-4">
+                            <h3 class="font-semibold text-gray-900">Sales forecasting and inventory management</h3>
+                            <p class="max-w-xs text-gray-500">This project demonstrates the effective application of machine learning techniques and Python to forecast sales and optimize inventory management in a retail context. By combining accurate sales forecasts with efficient inventory management strategies, businesses can achieve improved customer satisfaction and reduced operational costs.</p>
+                            <div class="mt-4">
+                                <a href="Sales Forecasting and Inventory Optimization.html" class="text-indigo-500 hover:text-indigo-600 font-semibold text-sm" target="_blank">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-              
-          <!-- Contact section -->
-          <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <div class="px-4 py-6 sm:px-0">
-              <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Contact">Contact</h1>
-              <div class="w-full mb-4">
-                <div class="h-1 mx-auto bg-gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-              </div>
-              <div class="flex justify-center mt-8">
-                <a href="https://www.linkedin.com/in/ronald-sol%C3%B3rzano-7b0494115/" target="_blank" rel="noopener noreferrer" class="mx-4">
-                  <img src="./img/linkedin.png" alt="LinkedIn" class="w-12 h-12">
-                </a>
-                <a href="https://github.com/rovid95/Ronald-portfolio" target="_blank" rel="noopener noreferrer" class="mx-4">
-                  <img src="./img/github.png" alt="GitHub" class="w-12 h-12">
-                </a>
-                <a href="mailto:ronald_dsn95@hotmail.com" class="mx-4">
-                  <img src="./img/outlook.png" alt="Email" class="w-12 h-12">
             </div>
+        </div>
+        <!-- About me section -->
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap items-center">
+              <div class="w-full md:w-1/2 px-4 py-6 sm:px-0">
+                  <h2 class="text-2xl font-bold leading-tight text-gray-900" id="About Me">About Me</h2>
+                  <p class="max-w-xl mt-6 text-gray-500">
+                      Hi, my name is <b>Ronald</b> i'm a data scientist and a computer system engineer.<br>
+                      My passion for data science is fueled by curiosity, the pursuit of knowledge and wanting to explain the world one IA model at the time.
+                      <br>I constantly strive to enhance my skills by staying up-to-date with the latest research, tools, and trends in the field.
+                      <br><br>
+                      In my free time i like making bbq with family and friends, also i'm a certified open water scuba diver so if you want a buddy to dive in the coast of Ecuador dm me!                      
+                  </p>
+              </div>
+              <div class="w-full md:w-1/2 flex justify-center">
+                  <img class="w-48 h-48 rounded-full" src="./img/foto_perfil.png" alt="Profile Picture">
+              </div>
           </div>
-        </main>
-        <footer class="bg-white shadow">
-          <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between">
-              <div class="text-gray-500">
+        </div>
+
+        <!-- About me section -->
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          <div class="px-4 py-6 sm:px-0">
+              <h2 class="text-2xl font-bold leading-tight text-gray-900" id="Skills">Skills</h2>
+              <div class="mt-6">
+                  <div class="shape-1"></div>
+                  <div class="shape-2"></div>
+                  <div class="container">
+                      <div class="skills">
+                          <div class="details">
+                              <span>Machine Learning Modeling</span>
+                              <span>90%</span>
+                          </div>
+                          <div class="bar">
+                              <div id="html-bar"></div>
+                          </div>
+                      </div>
+                      <div class="skills">
+                          <div class="details">
+                              <span>Python</span>
+                              <span>75%</span>
+                          </div>
+                          <div class="bar">
+                              <div id="css-bar"></div>
+                          </div>
+                      </div>
+                      <div class="skills">
+                          <div class="details">
+                              <span>Tableau</span>
+                              <span>70%</span>
+                          </div>
+                          <div class="bar">
+                              <div id="tableau-bar"></div>
+                          </div>
+                      </div>
+                      <div class="skills">
+                          <div class="details">
+                              <span>SQL</span>
+                              <span>72%</span>
+                          </div>
+                          <div class="bar">
+                              <div id="js-bar"></div>
+                          </div>
+                      </div>
+                      <div class="skills">
+                          <div class="details">
+                              <span>R</span>
+                              <span>68%</span>
+                          </div>
+                          <div class="bar">
+                              <div id="jQuery-bar"></div>
+                          </div>
+
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+        
+    </main>
+</div>
+
+
+<footer class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between">
+            <div class="text-gray-500">
                 <span>&copy; 2022 Ronald Solórzano</span>
-              </div>  
-              <div class="text-gray-500">
-                <span>Made with <span class="text-red-500">&hearts;</span> by Ronald Solórzano</span>
-              </div>
             </div>
-          </div>
-        </footer>
-        <script src="main.js"></script>
-      </body>
-      </html>
+            <div class="text-gray-500">
+                <!--<span>Made with <span class="text-red-500">&hearts;</span> by Ronald Solórzano</span>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
